@@ -4,8 +4,6 @@ myfile = open("salesreport.csv", "w+")
 data['Total'] = data['TaxAmt']+ data['SubTotal']  + data['Freight']
 id = data.loc[:, ['CustomerID', "Total"]]
 id = id.groupby("CustomerID").sum()
-x =data.head(10)
-x = x.to_string()
-myfile.write(x)
+id = id.round(2)    
+id = id.reset_index()
 id.to_csv("salesreport.csv", index=True)
-    
