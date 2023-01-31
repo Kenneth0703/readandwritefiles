@@ -7,6 +7,6 @@ read = csv.reader(infile)
 writer = csv.writer(newfile)
 
 for row in read:
-    rows = [row[1],row[1],row[4]]
+    rows = [row[1],row[2],row[4]]
     writer.writerow(rows)
 
