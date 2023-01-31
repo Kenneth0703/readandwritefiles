@@ -1,5 +1,10 @@
-import pandas as pd
-data = pd.read_csv('EmployeePay.csv')
-df = pd.DataFrame(data)
-df = df.to_string()
-print(df)
+import csv
+#infile = open("EmployeePay.csv","r") 
+with open("EmployeePay.csv","r") as csv_input:
+
+    reader = csv.reader(csv_input)
+    for row in reader:
+        print(row)
+
+
+
